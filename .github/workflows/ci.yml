@@ -1,6 +1,12 @@
 name: CI
 
-on: [push]
+
+#Define the trigger
+on:
+  push:
+    branches:
+      - main
+
 
 jobs:
   build:
@@ -28,7 +34,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: run test
-        run: echo running tests
+        run: mvn test
 
   deploy:
 
