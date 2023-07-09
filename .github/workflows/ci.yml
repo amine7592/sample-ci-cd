@@ -12,7 +12,8 @@ jobs:
       - name: Run a one-line script
         run: echo Starting project build!
       - name: Setup up JDK
-          with:
+        uses: actions/setup-java@v3
+        with:
             java-version: '20.0.1'
       - name: Compile with maven
         run: |
