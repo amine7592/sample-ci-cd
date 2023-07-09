@@ -33,6 +33,11 @@ jobs:
     needs: [build]
     steps:
       - uses: actions/checkout@v1
+      - name: Setup up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '20.0.1'
+          distribution: 'temurin'
       - name: run test
         run: mvn test
 
