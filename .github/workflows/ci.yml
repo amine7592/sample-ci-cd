@@ -15,6 +15,7 @@ jobs:
         run: |
           echo Add other actions to build,
           mvn compile
+
   test:
 
     runs-on: ubuntu-latest
@@ -23,11 +24,12 @@ jobs:
       - uses: actions/checkout@v1
       - name: run test
         run: echo running tests
+
   deploy:
 
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v1
-        name: deploy to production
+      - name: deploy to production
         run : echo deploy successful
