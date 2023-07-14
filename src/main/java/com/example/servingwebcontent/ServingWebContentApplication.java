@@ -13,7 +13,7 @@ public class ServingWebContentApplication {
 	@RequestMapping("/")
 	@ResponseBody
 	String home() {
-		return "Welcome Page";
+		return "Hello World";
 	}
 
 	public static void main(String[] args) {
