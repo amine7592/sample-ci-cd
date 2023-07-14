@@ -22,7 +22,7 @@ class ServingWebContentApplicationTests {
 	@Test
 	void contextLoads() throws Exception {
 
-		String name = "Amine";
+		String name = "Ami";
 
 		mvc.perform(MockMvcRequestBuilders.get("/greeting?name="+name))
 				.andExpect(status().isOk())
